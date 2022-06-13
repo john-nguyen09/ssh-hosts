@@ -1,0 +1,16 @@
+{
+  "name": "ssh-hosts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/app.js --outfile=dist/ssh-hosts --bundle --platform=node --target=node10.4 --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.14.23",
+    "inquirer": "^8.2.0"
+  }
+}
