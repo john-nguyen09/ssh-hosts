@@ -7,6 +7,7 @@ const { spawn } = require('child_process');
 
 const file = path.join(process.env.HOME, '.ssh', 'config');
 const pattern = /\s*Host\s+(.*)\s*/g;
+inquirer.registerPrompt('search-list', require('inquirer-search-list'));
 
 function onExit(childProcess) {
     return new Promise((resolve, reject) => {
@@ -34,11 +35,12 @@ async function main() {
 
     const answers = await inquirer.prompt([
         {
-            type: 'list',
+            type: 'search-list',
             choices: [
                 'Exit',
                 ...hosts,
             ],
+            message: 'Choose host',
             name: 'Choose host',
         }
     ]);

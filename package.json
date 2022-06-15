@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "esbuild": "^0.14.23",
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "inquirer-search-list": "^1.2.6"
   }
 }
